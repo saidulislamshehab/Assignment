@@ -3,14 +3,19 @@ import { Link } from 'react-router-dom';
 import Reactions from '../Elements/Reactions';
 import Comments from '../Elements/Comments';
 import Pagination from '../Elements/Pagination';
-import { comments } from '../DummyData/dummyData';
+import { comments as initialComments } from '../DummyData/dummyData';
 
 function MainPage() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [comments, setComments] = useState(initialComments);
   const commentsPerPage = 5;
   const indexOfLastComment = currentPage * commentsPerPage;
   const indexOfFirstComment = indexOfLastComment - commentsPerPage;
   const currentComments = comments.slice(indexOfFirstComment, indexOfLastComment);
+
+  const handleAddComment = (newComment) => {
+    setComments(prevComments => [newComment, ...prevComments]);
+  };
 
   return (
     <div className="page">
@@ -60,7 +65,11 @@ function MainPage() {
         <Reactions />
 
         {/* Comments Section */}
-        <Comments comments={currentComments} totalComments={comments.length} />
+        <Comments 
+          comments={currentComments} 
+          totalComments={comments.length} 
+          onAddComment={handleAddComment}
+        />
 
         {/* Pagination */}
         <Pagination

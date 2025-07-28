@@ -2,14 +2,30 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CommentReactions from './CommentReactions';
 
-function Comments({ comments, totalComments }) {
+function Comments({ comments, totalComments, onAddComment }) {
   const [commentText, setCommentText] = useState('');
 
   const handleSubmitComment = (e) => {
     e.preventDefault();
     if (commentText.trim()) {
-      // Here you would typically add the comment to your data
-      console.log('New comment:', commentText);
+      // Create new comment object
+      const newComment = {
+        id: comments.length + 1,
+        author: 'You',
+        date: new Date().toLocaleDateString('en-US', { 
+          day: 'numeric', 
+          month: 'long', 
+          year: 'numeric' 
+        }),
+        text: commentText,
+        likes: 0,
+        dislikes: 0
+      };
+      
+      // Call the parent function to add the comment
+      onAddComment(newComment);
+      
+      // Clear the input
       setCommentText('');
     }
   };
