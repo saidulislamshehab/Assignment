@@ -94,5 +94,69 @@ export const comments = [
     text: 'This is a fantastic article that provides valuable insights. The author has a great writing style and the content is both informative and engaging.', 
     likes: 5, 
     dislikes: 0 
+  },
+  { 
+    id: 13, 
+    author: 'Alex Thompson', 
+    date: '29 January 2025', 
+    text: 'This article really helped me understand the topic better. The author explains everything so clearly and the examples are perfect. Great work!', 
+    likes: 9, 
+    dislikes: 0 
+  },
+  { 
+    id: 14, 
+    author: 'Maria Rodriguez', 
+    date: '28 January 2025', 
+    text: 'I found this article to be incredibly useful for my project. The insights provided here are exactly what I needed. Thank you for sharing this knowledge.', 
+    likes: 6, 
+    dislikes: 1 
+  },
+  { 
+    id: 15, 
+    author: 'James Wilson', 
+    date: '27 January 2025', 
+    text: 'Excellent piece of writing! The author has a talent for making complex topics accessible. I learned so much from this article.', 
+    likes: 4, 
+    dislikes: 0 
+  },
+  { 
+    id: 16, 
+    author: 'Sophie Chen', 
+    date: '26 January 2025', 
+    text: 'This article is well-researched and thoughtfully written. The author presents the information in a way that is easy to follow and understand.', 
+    likes: 7, 
+    dislikes: 0 
+  },
+  { 
+    id: 17, 
+    author: 'Daniel Kim', 
+    date: '25 January 2025', 
+    text: 'I appreciate the thorough analysis in this article. The author covers all the important aspects and provides practical insights that I can apply.', 
+    likes: 5, 
+    dislikes: 1 
+  },
+  { 
+    id: 18, 
+    author: 'Emma Davis', 
+    date: '24 January 2025', 
+    text: 'This is one of the best articles I have read on this topic. The writing is engaging and the content is both informative and practical.', 
+    likes: 8, 
+    dislikes: 0 
+  },
+  { 
+    id: 19, 
+    author: 'Michael Johnson', 
+    date: '23 January 2025', 
+    text: 'Great article with valuable insights. The author has done an excellent job of explaining complex concepts in a simple and understandable way.', 
+    likes: 3, 
+    dislikes: 0 
+  },
+  { 
+    id: 20, 
+    author: 'Olivia Brown', 
+    date: '22 January 2025', 
+    text: 'This article provides exactly the information I was looking for. The examples are relevant and the explanations are clear and concise.', 
+    likes: 6, 
+    dislikes: 1 
   }
 ];
