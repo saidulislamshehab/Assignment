@@ -1,0 +1,71 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import CommentReactions from './CommentReactions';
+
+function Comments({ comments }) {
+  const [commentText, setCommentText] = useState('');
+
+  const handleSubmitComment = (e) => {
+    e.preventDefault();
+    if (commentText.trim()) {
+      // Here you would typically add the comment to your data
+      console.log('New comment:', commentText);
+      setCommentText('');
+    }
+  };
+
+  return (
+    <div className="comments-section">
+      <h3 className="comments-header">{comments.length} Comments</h3>
+      
+      {/* Comment Input */}
+      <form onSubmit={handleSubmitComment} className="comment-input-container">
+        <input
+          type="text"
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+          placeholder="Write your comment.."
+          className="comment-input"
+        />
+        <button
+          type="submit"
+          className="comment-submit"
+        >
+          →
+        </button>
+      </form>
+
+      {/* Comments List */}
+      <div>
+        {comments.map((comment) => (
+          <div key={comment.id} className="comment">
+            <div className="comment-header">
+              <div className="comment-avatar"></div>
+              <div>
+                <Link 
+                  to={`/author/${comment.id}`} 
+                  className="comment-author-link"
+                >
+                  {comment.author}
+                </Link>
+                <span className="comment-date">{comment.date}</span>
+              </div>
+              <button className="comment-report">Report</button>
+            </div>
+            <p className="comment-text">{comment.text}</p>
+            <div className="comment-actions">
+              <div className="comment-stats">
+                <span>Like {comment.likes}</span>
+                <span>Dislike {comment.dislikes}</span>
+              </div>
+              <button className="comment-reply">Reply</button>
+            </div>
+            <CommentReactions />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default Comments;
