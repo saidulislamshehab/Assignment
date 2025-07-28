@@ -60,7 +60,7 @@ function MainPage() {
         <Reactions />
 
         {/* Comments Section */}
-        <Comments comments={currentComments} />
+        <Comments comments={currentComments} totalComments={comments.length} />
 
         {/* Pagination */}
         <Pagination

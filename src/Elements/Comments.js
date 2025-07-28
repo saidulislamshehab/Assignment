@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CommentReactions from './CommentReactions';
 
-function Comments({ comments }) {
+function Comments({ comments, totalComments }) {
   const [commentText, setCommentText] = useState('');
 
   const handleSubmitComment = (e) => {
@@ -16,7 +16,7 @@ function Comments({ comments }) {
 
   return (
     <div className="comments-section">
-      <h3 className="comments-header">{comments.length} Comments</h3>
+      <h3 className="comments-header">{totalComments} Comments</h3>
       
       {/* Comment Input */}
       <form onSubmit={handleSubmitComment} className="comment-input-container">
