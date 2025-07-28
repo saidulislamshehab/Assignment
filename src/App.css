@@ -374,6 +374,41 @@ body {
   color: #dc2626;
 }
 
+.comment-reply-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 60px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.comment-reply-text span:first-child {
+  font-size: 14px;
+  margin-bottom: 1px;
+  line-height: 1;
+}
+
+.comment-reply-text span:last-child {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+.comment-reply-text:hover {
+  color: #3b82f6;
+  text-decoration: underline;
+}
+
 .pagination {
   display: flex;
   justify-content: center;

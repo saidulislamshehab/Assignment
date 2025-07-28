@@ -69,14 +69,7 @@ function Comments({ comments, totalComments, onAddComment }) {
               <button className="comment-report">Report</button>
             </div>
             <p className="comment-text">{comment.text}</p>
-            <div className="comment-actions">
-              <div className="comment-stats">
-                <span>Like {comment.likes}</span>
-                <span>Dislike {comment.dislikes}</span>
-              </div>
-              <button className="comment-reply">Reply</button>
-            </div>
-            <CommentReactions />
+            <CommentReactions likes={comment.likes} dislikes={comment.dislikes} />
           </div>
         ))}
       </div>
