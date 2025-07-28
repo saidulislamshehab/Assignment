@@ -8,7 +8,7 @@ function Comments({ comments, totalComments, onAddComment }) {
   const handleSubmitComment = (e) => {
     e.preventDefault();
     if (commentText.trim()) {
-      // Create new comment object
+      
       const newComment = {
         id: comments.length + 1,
         author: 'You',
@@ -22,10 +22,10 @@ function Comments({ comments, totalComments, onAddComment }) {
         dislikes: 0
       };
       
-      // Call the parent function to add the comment
+      
       onAddComment(newComment);
       
-      // Clear the input
+      
       setCommentText('');
     }
   };

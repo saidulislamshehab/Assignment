@@ -8,7 +8,6 @@ function CommentReactions({ likes = 0, dislikes = 0 }) {
   };
 
   const handleReplyClick = () => {
-    // Handle reply functionality
     console.log('Reply clicked');
   };
 

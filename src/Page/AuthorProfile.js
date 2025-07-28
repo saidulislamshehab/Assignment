@@ -5,14 +5,11 @@ import { comments } from '../DummyData/dummyData';
 function AuthorProfile() {
   const { authorId } = useParams();
   
-  // Find the author from comments data
   const author = comments.find(comment => comment.id === parseInt(authorId));
   
-  // If author not found, show default author
   const authorName = author ? author.author : 'Author Name';
   const authorDate = author ? author.date : 'January 2025';
 
-  // Generate realistic stats based on author
   const getAuthorStats = (authorName) => {
     const stats = {
       'John Smith': { followers: 1247, following: 89, posts: 156, bio: 'Tech enthusiast and software developer with 8+ years of experience. Love sharing insights about programming and new technologies.' },
