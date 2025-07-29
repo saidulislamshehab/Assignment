@@ -163,11 +163,11 @@ body {
 }
 
 .comments-section {
-  background-color: #eff6ff;
-  border-radius: 8px;
-  padding: 24px;
-  margin-bottom: 24px;
-  border: 1px solid #bfdbfe;
+  background-color: #E6E6FA; /* Light purple (Lavender) */
+  color: black; /* Optional: Text color for better readability */
+  border: 1px solid #D8BFD8; /* Thistle border */
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .comments-header {
